@@ -1,0 +1,1667 @@
+{
+  "_comment": "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org [Additional Information added by WebVOWL Exporter Version: 1.1.7]",
+  "header": {
+    "languages": [
+      "undefined"
+    ],
+    "baseIris": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+      "http://qudt.org/schema/qudt",
+      "http://www.w3.org/ns/ssn",
+      "http://www.w3.org/2000/01/rdf-schema",
+      "http://www.w3.org/2003/01/geo/wgs84_pos",
+      "http://www.w3.org/2001/XMLSchema",
+      "http://www.w3.org/ns/sosa",
+      "http://example.org/manufacturing-ontology"
+    ],
+    "prefixList": {
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "sosa": "http://www.w3.org/ns/sosa/",
+      "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "": "http://example.org/manufacturing-ontology#",
+      "ssn": "http://www.w3.org/ns/ssn/",
+      "xml": "http://www.w3.org/XML/1998/namespace",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "iri": "No IRI set"
+  },
+  "namespace": [],
+  "settings": {
+    "global": {
+      "zoom": "0.23",
+      "translation": [
+        345.36,
+        193.83
+      ],
+      "paused": false
+    },
+    "gravity": {
+      "classDistance": 200,
+      "datatypeDistance": 120
+    },
+    "filter": {
+      "checkBox": [
+        {
+          "id": "datatypeFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "objectPropertyFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "subclassFilterCheckbox",
+          "checked": false
+        },
+        {
+          "id": "disjointFilterCheckbox",
+          "checked": true
+        },
+        {
+          "id": "setoperatorFilterCheckbox",
+          "checked": false
+        }
+      ],
+      "degreeSliderValue": "0"
+    },
+    "modes": {
+      "checkBox": [
+        {
+          "id": "pickandpinModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "nodescalingModuleCheckbox",
+          "checked": true
+        },
+        {
+          "id": "compactnotationModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "colorexternalsModuleCheckbox",
+          "checked": true
+        }
+      ],
+      "colorSwitchState": false
+    }
+  },
+  "class": [
+    {
+      "id": "9",
+      "type": "owl:Class"
+    },
+    {
+      "id": "10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "2",
+      "type": "owl:Class"
+    },
+    {
+      "id": "7",
+      "type": "owl:Class"
+    },
+    {
+      "id": "20",
+      "type": "owl:Class"
+    },
+    {
+      "id": "41",
+      "type": "owl:Class"
+    },
+    {
+      "id": "45",
+      "type": "owl:Class"
+    },
+    {
+      "id": "34",
+      "type": "owl:Class"
+    },
+    {
+      "id": "17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "43",
+      "type": "owl:Class"
+    },
+    {
+      "id": "18",
+      "type": "owl:Class"
+    },
+    {
+      "id": "39",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "4",
+      "type": "owl:Class"
+    },
+    {
+      "id": "32",
+      "type": "owl:Class"
+    },
+    {
+      "id": "36",
+      "type": "owl:Class"
+    },
+    {
+      "id": "55",
+      "type": "owl:Thing"
+    },
+    {
+      "id": "64",
+      "type": "owl:Class"
+    },
+    {
+      "id": "14",
+      "type": "owl:Class"
+    },
+    {
+      "id": "23",
+      "type": "owl:Class"
+    },
+    {
+      "id": "56",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "8",
+      "type": "rdfs:Datatype"
+    },
+    {
+      "id": "65",
+      "type": "owl:Class"
+    },
+    {
+      "id": "15",
+      "type": "owl:Class"
+    },
+    {
+      "id": "37",
+      "type": "owl:Class"
+    },
+    {
+      "id": "21",
+      "type": "owl:Class"
+    },
+    {
+      "id": "27",
+      "type": "owl:Class"
+    },
+    {
+      "id": "31",
+      "type": "owl:Class"
+    },
+    {
+      "id": "25",
+      "type": "owl:Class"
+    },
+    {
+      "id": "5",
+      "type": "owl:Class"
+    },
+    {
+      "id": "1",
+      "type": "owl:Class"
+    },
+    {
+      "id": "30",
+      "type": "owl:Class"
+    },
+    {
+      "id": "12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "33",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "9",
+      "iri": "http://example.org/manufacturing-ontology#Actuator",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Actuator"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents an actuator on a CNC machine"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#Actuator1",
+          "labels": {
+            "IRI-based": "Actuator1"
+          }
+        }
+      ],
+      "pos": [
+        1406.57,
+        -506.76
+      ]
+    },
+    {
+      "id": "10",
+      "iri": "http://www.w3.org/ns/sosa/Actuator",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "Actuator"
+      },
+      "attributes": [
+        "external"
+      ],
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#NewActuator2025",
+          "labels": {
+            "IRI-based": "NewActuator2025"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#NewActuator20",
+          "labels": {
+            "IRI-based": "NewActuator20"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#NewActuator",
+          "labels": {
+            "IRI-based": "NewActuator"
+          }
+        }
+      ],
+      "pos": [
+        1647.04,
+        -234.59
+      ]
+    },
+    {
+      "id": "2",
+      "iri": "http://qudt.org/schema/qudt/Unit",
+      "baseIri": "http://qudt.org/schema/qudt",
+      "label": {
+        "IRI-based": "Unit"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -84.58,
+        346.67
+      ]
+    },
+    {
+      "id": "7",
+      "iri": "http://www.w3.org/ns/sosa/Observation",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "Observation"
+      },
+      "attributes": [
+        "external"
+      ],
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation1-20",
+          "labels": {
+            "IRI-based": "ActuatorObservation1-20"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation2-20",
+          "labels": {
+            "IRI-based": "ActuatorObservation2-20"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#Observation1",
+          "labels": {
+            "IRI-based": "Observation1"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#Observation2",
+          "labels": {
+            "IRI-based": "Observation2"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#Observation3",
+          "labels": {
+            "IRI-based": "Observation3"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation125",
+          "labels": {
+            "IRI-based": "ActuatorObservation125"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation1",
+          "labels": {
+            "IRI-based": "ActuatorObservation1"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation2",
+          "labels": {
+            "IRI-based": "ActuatorObservation2"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation225",
+          "labels": {
+            "IRI-based": "ActuatorObservation225"
+          }
+        }
+      ],
+      "pos": [
+        355.93,
+        -296.1
+      ]
+    },
+    {
+      "id": "20",
+      "iri": "http://example.org/manufacturing-ontology#Line",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Line"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a manufacturing line within a plant"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#Line1",
+          "labels": {
+            "IRI-based": "Line1"
+          }
+        }
+      ],
+      "pos": [
+        823.89,
+        864.75
+      ]
+    },
+    {
+      "id": "41",
+      "iri": "http://www.w3.org/ns/ssn/Deployment",
+      "baseIri": "http://www.w3.org/ns/ssn",
+      "label": {
+        "IRI-based": "Deployment"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        1683.02,
+        376.39
+      ]
+    },
+    {
+      "id": "45",
+      "iri": "http://www.w3.org/ns/sosa/ProcedureExecution",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "ProcedureExecution"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -113.04,
+        -690.25
+      ]
+    },
+    {
+      "id": "34",
+      "iri": "http://example.org/manufacturing-ontology#Welding_machine",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Welding_machine"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        524.06,
+        1155.36
+      ]
+    },
+    {
+      "id": "17",
+      "iri": "http://example.org/manufacturing-ontology#Execution",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Execution"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents an execution of a manufacturing procedure"
+      },
+      "pos": [
+        -240.97,
+        -360.87
+      ]
+    },
+    {
+      "id": "43",
+      "iri": "http://www.w3.org/ns/sosa/Procedure",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "Procedure"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -490.59,
+        287.15
+      ]
+    },
+    {
+      "id": "18",
+      "iri": "http://example.org/manufacturing-ontology#Procedure",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Procedure"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a manufacturing procedure"
+      },
+      "pos": [
+        -436.57,
+        -56.55
+      ]
+    },
+    {
+      "id": "39",
+      "iri": "http://www.w3.org/2001/XMLSchema#double",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "double"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        -40.34,
+        55.79
+      ]
+    },
+    {
+      "id": "4",
+      "iri": "http://www.w3.org/ns/ssn/System",
+      "baseIri": "http://www.w3.org/ns/ssn",
+      "label": {
+        "IRI-based": "System"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        1157.35,
+        171.98
+      ]
+    },
+    {
+      "id": "32",
+      "iri": "http://example.org/manufacturing-ontology#Drilling_machine",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Drilling_machine"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        1224.69,
+        757.13
+      ]
+    },
+    {
+      "id": "36",
+      "iri": "http://www.w3.org/ns/sosa/Sampler",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "Sampler"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -338.99,
+        956.85
+      ]
+    },
+    {
+      "id": "55",
+      "iri": "http://www.w3.org/2002/07/owl#Thing",
+      "baseIri": "http://owl2vowl.de",
+      "label": {
+        "undefined": "Thing"
+      },
+      "pos": [
+        -640.44,
+        -349.92
+      ]
+    },
+    {
+      "id": "64",
+      "iri": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+      "baseIri": "http://www.w3.org/2003/01/geo/wgs84_pos",
+      "label": {
+        "IRI-based": "Point"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -552.16,
+        1042.05
+      ]
+    },
+    {
+      "id": "14",
+      "iri": "http://example.org/manufacturing-ontology#CNC_Machine",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "CNC_Machine"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a CNC machine"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#CNC_Machine1",
+          "labels": {
+            "IRI-based": "CNC_Machine1"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#CNC_Machine2",
+          "labels": {
+            "IRI-based": "CNC_Machine2"
+          }
+        }
+      ],
+      "pos": [
+        442.36,
+        767.53
+      ]
+    },
+    {
+      "id": "23",
+      "iri": "http://www.w3.org/ns/sosa/Sensor",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "Sensor"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        710.56,
+        -460.29
+      ]
+    },
+    {
+      "id": "56",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "baseIri": "http://www.w3.org/2000/01/rdf-schema",
+      "label": "Literal",
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        -531.77,
+        -535.11
+      ]
+    },
+    {
+      "id": "8",
+      "iri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "baseIri": "http://www.w3.org/2001/XMLSchema",
+      "label": {
+        "IRI-based": "dateTime"
+      },
+      "attributes": [
+        "datatype"
+      ],
+      "pos": [
+        423.06,
+        -556.25
+      ]
+    },
+    {
+      "id": "65",
+      "iri": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "FeatureOfInterest"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -92.11,
+        862.89
+      ]
+    },
+    {
+      "id": "15",
+      "iri": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+      "baseIri": "http://www.w3.org/2003/01/geo/wgs84_pos",
+      "label": {
+        "IRI-based": "SpatialThing"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        324.38,
+        429.95
+      ]
+    },
+    {
+      "id": "37",
+      "iri": "http://www.w3.org/ns/sosa/Sample",
+      "baseIri": "http://www.w3.org/ns/sosa",
+      "label": {
+        "IRI-based": "Sample"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        -99.51,
+        1206.6
+      ]
+    },
+    {
+      "id": "21",
+      "iri": "http://example.org/manufacturing-ontology#Plant",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Plant"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a manufacturing plant"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#Plant1",
+          "labels": {
+            "IRI-based": "Plant1"
+          }
+        }
+      ],
+      "pos": [
+        933.91,
+        488.75
+      ]
+    },
+    {
+      "id": "27",
+      "iri": "http://example.org/manufacturing-ontology#CurrentSensor",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "CurrentSensor"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a current sensor"
+      },
+      "pos": [
+        818.34,
+        -795.02
+      ]
+    },
+    {
+      "id": "31",
+      "iri": "http://example.org/manufacturing-ontology#Test_machine",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Test_machine"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        1168.14,
+        1073.49
+      ]
+    },
+    {
+      "id": "25",
+      "iri": "http://example.org/manufacturing-ontology#TemperatureSensor",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "TemperatureSensor"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a temperature sensor"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#TemperatureSensor1",
+          "labels": {
+            "IRI-based": "TemperatureSensor1"
+          }
+        }
+      ],
+      "pos": [
+        1057.93,
+        -539.68
+      ]
+    },
+    {
+      "id": "5",
+      "iri": "http://example.org/manufacturing-ontology#Deployment",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Deployment"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents the deployment of a sensor or actuator on a CNC machine"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#Deployment3",
+          "labels": {
+            "IRI-based": "Deployment3"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#Deployment1",
+          "labels": {
+            "IRI-based": "Deployment1"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#Deployment2",
+          "labels": {
+            "IRI-based": "Deployment2"
+          }
+        }
+      ],
+      "pos": [
+        1479.46,
+        78.32
+      ]
+    },
+    {
+      "id": "1",
+      "iri": "http://qudt.org/schema/qudt/QuantityValue",
+      "baseIri": "http://qudt.org/schema/qudt",
+      "label": {
+        "IRI-based": "QuantityValue"
+      },
+      "attributes": [
+        "external"
+      ],
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation125_Result",
+          "labels": {
+            "IRI-based": "ActuatorObservation125_Result"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation225_Result",
+          "labels": {
+            "IRI-based": "ActuatorObservation225_Result"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation1-20_Result",
+          "labels": {
+            "IRI-based": "ActuatorObservation1-20_Result"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation1_Result",
+          "labels": {
+            "IRI-based": "ActuatorObservation1_Result"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation2-20_Result",
+          "labels": {
+            "IRI-based": "ActuatorObservation2-20_Result"
+          }
+        },
+        {
+          "iri": "http://example.org/manufacturing-ontology#ActuatorObservation2_Result",
+          "labels": {
+            "IRI-based": "ActuatorObservation2_Result"
+          }
+        }
+      ],
+      "pos": [
+        205.16,
+        90.56
+      ]
+    },
+    {
+      "id": "30",
+      "iri": "http://example.org/manufacturing-ontology#PositionSensor",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "PositionSensor"
+      },
+      "attributes": [
+        "external"
+      ],
+      "comment": {
+        "undefined": "Represents a position sensor"
+      },
+      "individuals": [
+        {
+          "iri": "http://example.org/manufacturing-ontology#PositionSensor1",
+          "labels": {
+            "IRI-based": "PositionSensor1"
+          }
+        }
+      ],
+      "pos": [
+        816.76,
+        -120.22
+      ]
+    },
+    {
+      "id": "12",
+      "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "baseIri": "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+      "label": {
+        "IRI-based": "Property"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        243.69,
+        -662.5
+      ]
+    },
+    {
+      "id": "33",
+      "iri": "http://example.org/manufacturing-ontology#Cutting_machine",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "Cutting_machine"
+      },
+      "attributes": [
+        "external"
+      ],
+      "pos": [
+        829.96,
+        1264.52
+      ]
+    }
+  ],
+  "property": [
+    {
+      "id": "0",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "3",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "6",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "11",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "13",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "16",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "19",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "22",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "24",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "26",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "28",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "29",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "35",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "38",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "40",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "42",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "44",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "46",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "47",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "48",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "49",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "50",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "51",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "52",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "53",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "54",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "57",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "58",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "59",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "60",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "61",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "62",
+      "type": "rdf:Property"
+    },
+    {
+      "id": "66",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "67",
+      "type": "owl:ObjectProperty"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "0",
+      "iri": "http://example.org/manufacturing-ontology#unit",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "unit"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a quantity value to its unit"
+      },
+      "domain": "1",
+      "range": "2",
+      "pos": [
+        52.59,
+        225.43
+      ]
+    },
+    {
+      "id": "3",
+      "iri": "http://example.org/manufacturing-ontology#hasDeployment",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasDeployment"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a system to a deployment"
+      },
+      "domain": "4",
+      "range": "5",
+      "pos": [
+        1288.74,
+        47.86
+      ]
+    },
+    {
+      "id": "6",
+      "iri": "http://example.org/manufacturing-ontology#timestamp",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "timestamp"
+      },
+      "attributes": [
+        "datatype",
+        "external"
+      ],
+      "comment": {
+        "undefined": "The timestamp of an observation"
+      },
+      "domain": "7",
+      "range": "8",
+      "pos": [
+        397.37,
+        -456.72
+      ]
+    },
+    {
+      "id": "11",
+      "iri": "http://example.org/manufacturing-ontology#observedProperty",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "observedProperty"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links an observation to the property it observed"
+      },
+      "domain": "7",
+      "range": "12",
+      "pos": [
+        296.38,
+        -490.5
+      ]
+    },
+    {
+      "id": "13",
+      "iri": "http://example.org/manufacturing-ontology#hasLocation",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasLocation"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a CNC machine to its geographic location"
+      },
+      "domain": "14",
+      "range": "15",
+      "pos": [
+        381.1,
+        592.23
+      ]
+    },
+    {
+      "id": "16",
+      "iri": "http://example.org/manufacturing-ontology#executesProcedure",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "executesProcedure"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links an execution to the procedure it executes"
+      },
+      "domain": "17",
+      "range": "18",
+      "pos": [
+        -338.77,
+        -208.71
+      ]
+    },
+    {
+      "id": "19",
+      "iri": "http://example.org/manufacturing-ontology#hasPlant",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasPlant"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a line to its plant"
+      },
+      "domain": "20",
+      "range": "21",
+      "pos": [
+        911.64,
+        684.25
+      ]
+    },
+    {
+      "id": "22",
+      "iri": "http://example.org/manufacturing-ontology#madeObservation",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "madeObservation"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a sensor to the observation it made"
+      },
+      "domain": "23",
+      "range": "7",
+      "pos": [
+        543.87,
+        -383.12
+      ]
+    },
+    {
+      "id": "24",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "25",
+      "range": "23",
+      "pos": [
+        879.1,
+        -498.81
+      ]
+    },
+    {
+      "id": "26",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "27",
+      "range": "23",
+      "pos": [
+        764.45,
+        -627.66
+      ]
+    },
+    {
+      "id": "28",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "20",
+      "range": "21",
+      "pos": [
+        832.09,
+        660.82
+      ]
+    },
+    {
+      "id": "29",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "30",
+      "range": "23",
+      "pos": [
+        762.09,
+        -295.29
+      ]
+    },
+    {
+      "id": "35",
+      "iri": "http://example.org/manufacturing-ontology#hasSample",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasSample"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a sampler to a sample"
+      },
+      "domain": "36",
+      "range": "37",
+      "pos": [
+        -219.25,
+        1081.73
+      ]
+    },
+    {
+      "id": "38",
+      "iri": "http://example.org/manufacturing-ontology#numericValue",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "numericValue"
+      },
+      "attributes": [
+        "datatype",
+        "external"
+      ],
+      "comment": {
+        "undefined": "The numeric value of a quantity value"
+      },
+      "domain": "1",
+      "range": "39",
+      "pos": [
+        61.47,
+        70.21
+      ]
+    },
+    {
+      "id": "40",
+      "iri": "http://example.org/manufacturing-ontology#hasLine",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasLine"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a CNC machine to its line"
+      },
+      "domain": "14",
+      "range": "20",
+      "pos": [
+        623.1,
+        848.94
+      ]
+    },
+    {
+      "id": "42",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "18",
+      "range": "43",
+      "pos": [
+        -463.58,
+        115.3
+      ]
+    },
+    {
+      "id": "44",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "17",
+      "range": "45",
+      "pos": [
+        -177.01,
+        -525.56
+      ]
+    },
+    {
+      "id": "46",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "21",
+      "range": "4",
+      "pos": [
+        1048.67,
+        326.06
+      ]
+    },
+    {
+      "id": "47",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "33",
+      "range": "20",
+      "pos": [
+        827,
+        1069.91
+      ]
+    },
+    {
+      "id": "48",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "32",
+      "range": "20",
+      "pos": [
+        1029.38,
+        809.57
+      ]
+    },
+    {
+      "id": "49",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "5",
+      "range": "41",
+      "pos": [
+        1585.77,
+        234
+      ]
+    },
+    {
+      "id": "50",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "34",
+      "range": "20",
+      "pos": [
+        670.19,
+        1013.72
+      ]
+    },
+    {
+      "id": "51",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "9",
+      "range": "10",
+      "pos": [
+        1524.97,
+        -372.75
+      ]
+    },
+    {
+      "id": "52",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "14",
+      "range": "20",
+      "pos": [
+        643.56,
+        769.61
+      ]
+    },
+    {
+      "id": "53",
+      "label": "Subclass of",
+      "attributes": [
+        "object",
+        "anonymous"
+      ],
+      "domain": "31",
+      "range": "20",
+      "pos": [
+        1000.52,
+        971.85
+      ]
+    },
+    {
+      "id": "54",
+      "iri": "http://example.org/manufacturing-ontology#hasResult",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasResult"
+      },
+      "attributes": [
+        "datatype",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links an observation to its result"
+      },
+      "domain": "55",
+      "range": "56",
+      "pos": [
+        -581.45,
+        -450.45
+      ]
+    },
+    {
+      "id": "57",
+      "iri": "http://example.org/manufacturing-ontology#hasValue",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "hasValue"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links an observation to its value"
+      },
+      "domain": "7",
+      "range": "1",
+      "pos": [
+        280.02,
+        -101.44
+      ]
+    },
+    {
+      "id": "58",
+      "label": {
+        "IRI-based": "3",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "34",
+      "range": "34",
+      "pos": [
+        410.9,
+        1267.25
+      ]
+    },
+    {
+      "id": "59",
+      "label": {
+        "IRI-based": "4",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "32",
+      "range": "32",
+      "pos": [
+        1379.94,
+        723.1
+      ]
+    },
+    {
+      "id": "60",
+      "label": {
+        "IRI-based": "5",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "14",
+      "range": "14",
+      "pos": [
+        285.38,
+        783.25
+      ]
+    },
+    {
+      "id": "61",
+      "label": {
+        "IRI-based": "6",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "33",
+      "range": "33",
+      "pos": [
+        810.83,
+        1420.35
+      ]
+    },
+    {
+      "id": "62",
+      "label": {
+        "IRI-based": "7",
+        "undefined": "is a"
+      },
+      "attributes": [
+        "rdf"
+      ],
+      "domain": "31",
+      "range": "31",
+      "pos": [
+        1312.3,
+        1136.31
+      ]
+    },
+    {
+      "id": "66",
+      "iri": "http://example.org/manufacturing-ontology#deployedOn",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "deployedOn"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a deployment to the system it is deployed on"
+      },
+      "domain": "5",
+      "range": "4",
+      "pos": [
+        1330.08,
+        189.94
+      ]
+    },
+    {
+      "id": "67",
+      "iri": "http://example.org/manufacturing-ontology#isSampleOf",
+      "baseIri": "http://example.org/manufacturing-ontology",
+      "label": {
+        "IRI-based": "isSampleOf"
+      },
+      "attributes": [
+        "object",
+        "external"
+      ],
+      "comment": {
+        "undefined": "Links a sample to the feature of interest it is a sample of"
+      },
+      "domain": "37",
+      "range": "65",
+      "pos": [
+        -95.81,
+        1034.75
+      ]
+    }
+  ]
+}

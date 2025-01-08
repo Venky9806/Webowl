@@ -1,0 +1,402 @@
+<rdf:RDF
+    xmlns="http://example.org/manufacturing-ontology#"
+    xmlns:qudt="http://qudt.org/schema/qudt/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sosa="http://www.w3.org/ns/sosa/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ssn="http://www.w3.org/ns/ssn/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" >
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasSample">
+        <rdfs:comment>Links a sampler to a sample</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#observedProperty">
+        <rdfs:comment>Links an observation to the property it observed</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Line1">
+        <hasPlant rdf:resource="http://example.org/manufacturing-ontology#Plant1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#executesProcedure">
+        <rdfs:comment>Links an execution to the procedure it executes</rdfs:comment>
+        <rdfs:range rdf:resource="http://example.org/manufacturing-ontology#Procedure"/>
+        <rdfs:domain rdf:resource="http://example.org/manufacturing-ontology#Execution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#NewActuator20">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#unit">
+        <rdfs:comment>Links a quantity value to its unit</rdfs:comment>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Plant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment>Represents a manufacturing plant</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <rdfs:comment>Represents an actuator on a CNC machine</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ProcedureExecution">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation225">
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-17T11:00:00Z</sosa:resultTime>
+        <sosa:hasResult rdf:resource="http://example.org/manufacturing-ontology#ActuatorObservation225_Result"/>
+        <sosa:madeByActuator rdf:resource="http://example.org/manufacturing-ontology#NewActuator2025"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#PositionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment>Represents a position sensor</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation225_Result">
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1525.5</qudt:numericValue>
+        <qudt:unit rdf:resource="http://example.org/manufacturing-ontology#Meter2"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasLine">
+        <rdfs:comment>Links a CNC machine to its line</rdfs:comment>
+        <rdfs:range rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdfs:domain rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#numericValue">
+        <rdfs:comment>The numeric value of a quantity value</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#CNC_Machine2">
+        <hasLocation rdf:nodeID="A0"/>
+        <hasLine rdf:resource="http://example.org/manufacturing-ontology#Line1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="A0">
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-118.2437</geo:long>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.0522</geo:lat>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasPlant">
+        <rdfs:comment>Links a line to its plant</rdfs:comment>
+        <rdfs:range rdf:resource="http://example.org/manufacturing-ontology#Plant"/>
+        <rdfs:domain rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasLocation">
+        <rdfs:comment>Links a CNC machine to its geographic location</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:domain rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation1_Result">
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</qudt:numericValue>
+        <qudt:unit rdf:resource="http://example.org/manufacturing-ontology#Meter"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#PositionSensor1">
+        <hasDeployment rdf:resource="http://example.org/manufacturing-ontology#Deployment2"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#PositionSensor"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#CNC_Machine1">
+        <hasLocation rdf:nodeID="A1"/>
+        <hasLine rdf:resource="http://example.org/manufacturing-ontology#Line1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Deployment3">
+        <deployedOn rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Deployment"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/Deployment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Deployment1">
+        <deployedOn rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Deployment"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Deployment2">
+        <deployedOn rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Deployment"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:comment>Represents the deployment of a sensor or actuator on a CNC machine</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment>Represents a temperature sensor</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Actuator1">
+        <hasDeployment rdf:resource="http://example.org/manufacturing-ontology#Deployment3"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Actuator"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation125_Result">
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1025.0</qudt:numericValue>
+        <qudt:unit rdf:resource="http://example.org/manufacturing-ontology#Meter3"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasResult">
+        <rdfs:comment>Links an observation to its result</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#deployedOn">
+        <rdfs:comment>Links a deployment to the system it is deployed on</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:domain rdf:resource="http://example.org/manufacturing-ontology#Deployment"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuator">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Welding_machine">
+        <rdfs:subClassOf rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Welding_machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/schema/qudt/unit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="A2">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#temperature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#isSampleOf">
+        <rdfs:comment>Links a sample to the feature of interest it is a sample of</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#CurrentSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment>Represents a current sensor</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#TemperatureSensor1">
+        <hasDeployment rdf:resource="http://example.org/manufacturing-ontology#Deployment1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#TemperatureSensor"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="A1">
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-74.006</geo:long>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.7128</geo:lat>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/schema/qudt/Unit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://qudt.org/schema/qudt/QuantityValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Plant1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Plant"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampler">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#madeObservation">
+        <rdfs:comment>Links a sensor to the observation it made</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation1">
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-17T10:00:00Z</sosa:resultTime>
+        <sosa:hasResult rdf:resource="http://example.org/manufacturing-ontology#ActuatorObservation1_Result"/>
+        <sosa:madeByActuator rdf:resource="http://example.org/manufacturing-ontology#NewActuator"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation2">
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-17T11:00:00Z</sosa:resultTime>
+        <sosa:hasResult rdf:resource="http://example.org/manufacturing-ontology#ActuatorObservation2_Result"/>
+        <sosa:madeByActuator rdf:resource="http://example.org/manufacturing-ontology#NewActuator"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation125">
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-17T10:00:00Z</sosa:resultTime>
+        <sosa:hasResult rdf:resource="http://example.org/manufacturing-ontology#ActuatorObservation125_Result"/>
+        <sosa:madeByActuator rdf:resource="http://example.org/manufacturing-ontology#NewActuator2025"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Observation1">
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-11-20T14:30:00Z</timestamp>
+        <observedProperty rdf:resource="http://example.org/manufacturing-ontology#temperature"/>
+        <madeObservation rdf:resource="http://example.org/manufacturing-ontology#TemperatureSensor1"/>
+        <hasResult rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.5</hasResult>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation2-20">
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-19T11:00:00Z</sosa:resultTime>
+        <sosa:hasResult rdf:resource="http://example.org/manufacturing-ontology#ActuatorObservation2-20_Result"/>
+        <sosa:madeByActuator rdf:resource="http://example.org/manufacturing-ontology#NewActuator20"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation1-20_Result">
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</qudt:numericValue>
+        <qudt:unit rdf:resource="http://example.org/manufacturing-ontology#Meter"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Observation2">
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-11-20T14:31:00Z</timestamp>
+        <observedProperty rdf:resource="http://example.org/manufacturing-ontology#position"/>
+        <madeObservation rdf:resource="http://example.org/manufacturing-ontology#PositionSensor1"/>
+        <hasValue rdf:nodeID="A3"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Drilling_machine">
+        <rdfs:subClassOf rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Drilling_machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Observation3">
+        <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-11-20T14:32:00Z</timestamp>
+        <observedProperty rdf:resource="http://example.org/manufacturing-ontology#position"/>
+        <madeObservation rdf:resource="http://example.org/manufacturing-ontology#Actuator1"/>
+        <hasValue rdf:nodeID="A4"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="A3">
+        <numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">23.22e0</numericValue>
+        <qudt:unit rdf:resource="http://qudt.org/schema/qudt/Meter"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasValue">
+        <rdfs:comment>Links an observation to its value</rdfs:comment>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#CNC_Machine">
+        <rdfs:subClassOf rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdfs:comment>Represents a CNC machine</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#CNC_Machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Line">
+        <rdfs:subClassOf rdf:resource="http://example.org/manufacturing-ontology#Plant"/>
+        <rdfs:comment>Represents a manufacturing line within a plant</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Procedure">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:comment>Represents a manufacturing procedure</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Test_machine">
+        <rdfs:subClassOf rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Test_machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation2-20_Result">
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.5</qudt:numericValue>
+        <qudt:unit rdf:resource="http://example.org/manufacturing-ontology#Meter"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Cutting_machine">
+        <rdfs:subClassOf rdf:resource="http://example.org/manufacturing-ontology#Line"/>
+        <rdf:type rdf:resource="http://example.org/manufacturing-ontology#Cutting_machine"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="A4">
+        <numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">23.22e0</numericValue>
+        <qudt:unit rdf:resource="http://qudt.org/schema/qudt/Meter"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#NewActuator2025">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation2_Result">
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.5</qudt:numericValue>
+        <qudt:unit rdf:resource="http://example.org/manufacturing-ontology#Meter"/>
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#position">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#NewActuator">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#ActuatorObservation1-20">
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-18T10:00:00Z</sosa:resultTime>
+        <sosa:hasResult rdf:resource="http://example.org/manufacturing-ontology#ActuatorObservation1-20_Result"/>
+        <sosa:madeByActuator rdf:resource="http://example.org/manufacturing-ontology#NewActuator20"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#hasDeployment">
+        <rdfs:comment>Links a system to a deployment</rdfs:comment>
+        <rdfs:range rdf:resource="http://example.org/manufacturing-ontology#Deployment"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#timestamp">
+        <rdfs:comment>The timestamp of an observation</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.org/manufacturing-ontology#Execution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ProcedureExecution"/>
+        <rdfs:comment>Represents an execution of a manufacturing procedure</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </rdf:Description>
+</rdf:RDF>
